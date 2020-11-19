@@ -18,125 +18,12 @@
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="{{url_for('static', filename='js/html5shiv.min.js')}}"></script>
 		<![endif]-->
-
     {% endblock %}
   </head>
+  {% block content %}
   <body>
-    <!-- Page-->
-    <div class="page">
-      {% block page %}
-
-      <!-- Page Header-->
-
-      <header class="page-head">
-
-        {% block header %}
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-minimal rd-navbar-dark" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-stick-up-clone="false" data-md-stick-up-offset="102px" data-lg-stick-up-offset="60px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
-            <div class="rd-navbar-inner">
-              <!-- RD Navbar Panel-->
-              <div class="rd-navbar-panel">
-                <!-- RD Navbar Toggle-->
-                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-outer-panel"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html">
-                  <div class="rd-navbar-fixed--hidden"><img src="{{url_for('static', filename='images/logo-180x40.png')}}" alt="" width="180" height="40"/>
-                  </div>
-                  <div class="rd-navbar-fixed--visible"><img src="{{url_for('static', filename='images/logo-inverse-151x38.png')}}" alt="" width="151" height="38"/>
-                  </div></a>
-              </div>
-              <div class="rd-navbar-outer-panel">
-                <div class="rd-navbar-nav-wrap">
-                  <!-- RD Navbar Nav-->
-                  <ul class="rd-navbar-nav">
-                    <li class="active"><a href="#home">Home</a></li>
-                    <li><a href="#about">Über uns</a></li>
-                    <li><a href="#services">Service</a></li>
-                    <li><a href="#team">Das Team</a></li>
-                  <!--  <li><a href="#pricing">Pricing</a></li> -->
-                    <li><a href="#empfehlung">Empfehlungen</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
-                  </ul>
-                </div>
-                <div class="rd-navbar-aside">
-                  <div class="rd-navbar-aside-toggle" data-rd-navbar-toggle=".rd-navbar-aside"><span></span></div>
-                  <div class="rd-navbar-aside-content"><a class="btn btn-primary btn-white-outline" href="#" data-toggle="modal" data-target="#free-consultation">free consultation</a></div>
-                </div>
-              </div>
-            </div>
-          </nav>
-
-          {% endblock %}
-        </div>
-
-        {% endblock %}
-      </header>
-
-      <!-- Page Content-->
-      <!-- Swiper-->
-      <div class="swiper-container swiper-slider" id="home" data-autoplay="5000" data-loop="true" data-slide-effect="fade">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="{{url_for('static', filename='images/home-slide-3-1920x600.jpg')}}" alt="" width="1920" height="600"/>
-            <div class="swiper-slide-caption">
-              <div class="shell text-center text-sm-left">
-                <div class="range">
-                  <div class="cell-sm-8 cell-md-8 cell-lg-7">
-                    <h1>
-                      Professional. Friendly.
-                      Courteous.
-                    </h1>
-                    <div class="swiper-slide-text">
-                      <h5 class="text-style-1">
-                        Renovate is ready to help with all your
-                        appliance repair and service needs.
-                      </h5>
-                    </div>
-                    <div class="offset-top-35"><a class="btn btn-primary btn-mod-1" href="#" data-toggle="modal" data-target="#diagnostic">order diagnostics</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide"><img src="{{url_for('static', filename='images/home-slide-2-1920x600.jpg')}}" alt="" width="1920" height="600"/>
-            <div class="swiper-slide-caption">
-              <div class="shell text-center text-sm-left">
-                <div class="range">
-                  <div class="cell-sm-8 cell-md-8 cell-lg-6">
-                    <h1>
-                      Customer Support
-                      Is Not a Service,
-                      It's an Attitude.
-                    </h1>
-                    <div class="offset-top-35 offset-sm-top-65"><a class="btn btn-primary btn-mod-1" href="#" data-toggle="modal" data-target="#diagnostic">order diagnostics</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide"><img src="{{url_for('static', filename='images/home-slide-1-1920x600.jpg')}}" alt="" width="1920" height="600"/>
-            <div class="swiper-slide-caption">
-              <div class="shell text-center text-sm-left">
-                <div class="range">
-                  <div class="cell-sm-8 cell-md-8 cell-lg-9">
-                    <h1>Customer Service<br class="veil reveal-sm-block">Is Our #1 Priority!</h1>
-                    <div class="swiper-slide-text">
-                      <h5 class="text-style-1">Our team is always ready to provide high-quality customer service</h5>
-                    </div>
-                    <div class="offset-top-35"><a class="btn btn-primary btn-mod-1" href="#" data-toggle="modal" data-target="#diagnostic">order diagnostics</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Swiper Pagination-->
-        <div class="swiper-pagination-wrap">
-          <div class="shell">
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </div>
-
+  {% include 'navbar.html' %}
+  {% include 'swiper.html' %}
       <!-- A Few Words About Us-->
       <section class="section-60 section-sm-90 section-md-110" id="about">
         <div class="shell">
@@ -832,9 +719,7 @@
       </div>
     </div>
     <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
-    <!-- Javascript-->
-    <script src="{{url_for('static', filename='js/core.min.js')}}"></script>
-    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  {% include 'footer.html' %}
   </body>
+{% endblock %}
 </html>
