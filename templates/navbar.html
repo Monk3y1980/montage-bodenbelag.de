@@ -1,3 +1,12 @@
+{% set navbar = [{'name': 'Home', 'url': 'index', 'id': 'home'},
+                {'name': 'Über uns', 'url': '#about', 'id': 'about'},
+                {'name': 'Service', 'url': '#services', 'id': 'services'},
+                {'name': 'Das Team', 'url': '#team', 'id': 'team'},
+                {'name': 'Empfehlungen', 'url': '#empfehlung', 'id': 'empfehlung'},
+                {'name': 'Preise', 'url': '#preise', 'id': 'preise'},
+                {'name': 'Kontakt', 'url': '#kontakt', 'id': 'kontakt'}
+] -%}
+
 <!-- Page-->
     <div class="page">
       <!-- Page Header-->
@@ -10,7 +19,7 @@
               <div class="rd-navbar-panel">
                 <!-- RD Navbar Toggle-->
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-outer-panel"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html">
+                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index">
                   <div class="rd-navbar-fixed--hidden"><img src="{{url_for('static', filename='images/logo-180x40.png')}}" alt="" width="180" height="40"/>
                   </div>
                   <div class="rd-navbar-fixed--visible"><img src="{{url_for('static', filename='images/logo-inverse-151x38.png')}}" alt="" width="151" height="38"/>
@@ -18,23 +27,22 @@
               </div>
               <div class="rd-navbar-outer-panel">
                 <div class="rd-navbar-nav-wrap">
+
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                    <li class="active"><a href="#home">Home</a></li>
-                    <li><a href="#about">Über uns</a></li>
-                    <li><a href="#services">Service</a></li>
-                    <li><a href="#team">Das Team</a></li>
-                  <!--  <li><a href="#pricing">Pricing</a></li> -->
-                    <li><a href="#empfehlung">Empfehlungen</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
+                    {% for nav in navbar %}
+                    <li {% if nav.id == home %}class="active"{% endif %}><a href="{{ nav.url|e }}">{{ nav.name|e }}</a></li>
+                    {% endfor %}
                   </ul>
+
                 </div>
                 <div class="rd-navbar-aside">
                   <div class="rd-navbar-aside-toggle" data-rd-navbar-toggle=".rd-navbar-aside"><span></span></div>
-                  <div class="rd-navbar-aside-content"><a class="btn btn-primary btn-white-outline" href="#" data-toggle="modal" data-target="#free-consultation">free consultation</a></div>
+                  <div class="rd-navbar-aside-content"><a class="btn btn-primary btn-white-outline" href="#" data-toggle="modal" data-target="#free-consultation">Kostenlose Beratung</a></div>
                 </div>
               </div>
             </div>
           </nav>
         </div>
       </header>
+    </div>

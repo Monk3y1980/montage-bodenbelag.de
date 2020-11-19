@@ -18,6 +18,7 @@
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="{{url_for('static', filename='js/html5shiv.min.js')}}"></script>
 		<![endif]-->
+
     {% endblock %}
   </head>
   {% block content %}
@@ -286,7 +287,7 @@
 
       <!--Section Pricing-->
       <!-- Four Plans-->
-      <section class="section-80 text-center" id="pricing">
+      <section class="section-80 text-center" id="preise">
         <div class="shell">
           <div class="range">
             <div class="cell-xs-12">
@@ -368,7 +369,7 @@
       </section>
 
       <!-- Testimonials-->
-      <section class="section-60 section-sm-top-110 section-sm-bottom-100 bg-gray-lighter" id="testimonials">
+      <section class="section-60 section-sm-top-110 section-sm-bottom-100 bg-gray-lighter" id="empfehlung">
         <div class="shell">
           <div class="range text-center">
             <div class="cell-xs-12">
@@ -532,7 +533,7 @@
       </section>
 
       <!-- Google Map-->
-      <section class="section">
+      <section class="section" id="kontakt">
         <div class="google-map-container" data-zoom="15" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-styles="[{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:43},{&quot;lightness&quot;:-11},{&quot;hue&quot;:&quot;#0088ff&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;hue&quot;:&quot;#ff0000&quot;},{&quot;saturation&quot;:-100},{&quot;lightness&quot;:99}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#808080&quot;},{&quot;lightness&quot;:54}]},{&quot;featureType&quot;:&quot;landscape.man_made&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ece2d9&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ccdca1&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;labels.text.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#767676&quot;}]},{&quot;featureType&quot;:&quot;road&quot;,&quot;elementType&quot;:&quot;labels.text.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;landscape.natural&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#b8cb93&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;poi.sports_complex&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;poi.medical&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;poi.business&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;simplified&quot;}]}]">
           <div class="google-map google-map-big"></div>
           <ul class="google-map-markers">
@@ -540,185 +541,6 @@
           </ul>
         </div>
       </section>
-      <!-- Page Footer-->
-      <footer class="page-foot bg-gray-dark">
-        <div class="shell text-center text-sm-left">
-          <div class="range range-sm-center">
-            <div class="cell-sm-10 cell-md-12">
-              <div class="range range-md-justify">
-                <div class="cell-sm-6 cell-md-3 wrap-lg-justify-vertical">
-                  <div class="brand-wrap"><a class="brand" href="index.html"><img src="{{url_for('static', filename='images/logo-inverse-151x38.png')}}" alt="" width="151" height="38"/></a></div>
-                  <div class="offset-top-30 offset-sm-top-65">
-                    <ul class="list-inline list-inline-xs">
-                      <li><a class="icon icon-xs icon-gray fa-facebook" href="#"></a></li>
-                      <li><a class="icon icon-xs icon-gray fa-twitter" href="#"></a></li>
-                      <li><a class="icon icon-xs icon-gray fa-pinterest-p" href="#"></a></li>
-                      <li><a class="icon icon-xs icon-gray fa-vimeo" href="#"></a></li>
-                      <li><a class="icon icon-xs icon-gray fa-google" href="#"></a></li>
-                      <li><a class="icon icon-xs icon-gray fa-rss" href="#"></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="cell-sm-6 cell-md-4 offset-top-55 offset-sm-top-0">
-                  <div class="max-width-300">
-                    <h5 class="h5-variant-1">Newsletter</h5>
-                    <hr>
-                    <p class="offset-top-22">Keep up with the latest news, special offers and other discount information. Enter your e-mail and subscribe to our newsletter.</p>
-                    <!-- RD Mailform-->
-                    <form class="rd-mailform rd-mailform-inline rd-mailform-inline-sm offset-top-10" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                      <div class="form-group">
-                        <label class="form-label" for="footer-subscribe-email">Enter your e-mail...</label>
-                        <input class="form-control" id="footer-subscribe-email" type="email" name="email" data-constraints="@Email @Required">
-                      </div>
-                      <button class="btn btn-xs btn-primary btn-no-shadow" type="submit">subscribe</button>
-                    </form>
-                  </div>
-                </div>
-                <div class="cell-md-4 cell-lg-5 offset-top-55 offset-md-top-0">
-                  <div class="range">
-                    <div class="cell-xs-12">
-                      <h5 class="h5-variant-1">Contact Us</h5>
-                      <hr>
-                    </div>
-                    <div class="cell-xs-5 cell-sm-6 cell-md-12 cell-lg-6 offset-top-18 text-xs-left">
-                      <address class="contact-info contact-info-contrast">
-                        <div class="unit unit-xs-horizontal unit-spacing-xs">
-                          <div class="unit-left icon-adjust-vertical"><span class="icon icon-xs icon-white mdi mdi-phone"></span></div>
-                          <div class="unit-body"><span><a href="tel:#">1-800-1234-567</a></span><span><a href="tel:#">1-800-3214-951</a></span></div>
-                        </div>
-                        <div class="unit unit-xs-horizontal unit-middle unit-spacing-xs offset-top-22 offset-xs-top-18">
-                          <div class="unit-left icon-adjust-vertical"><span class="icon icon-xs icon-white mdi mdi-email-outline"></span></div>
-                          <div class="unit-body"><a class="link-primary-contrast" href="mailto:#">info@demolink.org</a></div>
-                        </div>
-                      </address>
-                    </div>
-                    <div class="cell-xs-7 cell-sm-6 cell-md-12 cell-lg-6 offset-top-22 offset-xs-top-18 inset-lg-left-9 text-xs-left">
-                      <address class="contact-info contact-info-contrast">
-                        <div class="unit unit-xs-horizontal unit-spacing-xs">
-                          <div class="unit-left icon-adjust-vertical"><span class="icon icon-xs icon-white mdi mdi-map-marker"></span></div>
-                          <div class="unit-body"><a class="nowrap" href="#">2130 Fulton Street, San Diego,<br>CA 94117-1080 USA</a></div>
-                        </div>
-                        <div class="unit unit-xs-horizontal unit-spacing-xs offset-top-22">
-                          <div class="unit-left icon-adjust-vertical"><span class="icon icon-xs icon-white mdi fa-clock-o"></span></div>
-                          <div class="unit-body"><span>Mon-Fri: 9:00am-6:00pm</span><span>Sat-Sun: 10:00am-5:00pm</span></div>
-                        </div>
-                      </address>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="range offset-top-55 offset-sm-top-60 offset-lg-top-88">
-                <div class="cell-xs-12">
-                  <p class="rights">&#169;&nbsp;<span id="copyright-year"></span>&nbsp;All Rights Reserved&nbsp;</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <!-- Free Consultation Modal-->
-      <!-- Modal-->
-      <div class="modal fade contact-modal" id="free-consultation" tabindex="-1" role="dialog" aria-label="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-custom">
-          <div class="modal-content">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <div class="modal-header">
-              <h5 class="modal-title">Schedule a Consultation</h5>
-            </div>
-            <div class="modal-dialog-inner">
-              <form class="rd-mailform mailform-modal text-left offset-top-30" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="range range-15">
-                  <div class="cell-lg-12">
-                    <div class="form-group">
-                      <label class="form-label" for="free-consultation-name">Your name</label>
-                      <input class="form-control" id="free-consultation-name" type="text" name="name" data-constraints="@Required">
-                    </div>
-                  </div>
-                  <div class="cell-lg-12 offset-top-20">
-                    <div class="form-group">
-                      <label class="form-label" for="free-consultation-email">Your e-mail</label>
-                      <input class="form-control" id="free-consultation-email" type="email" name="email" data-constraints="@Required @Email">
-                    </div>
-                  </div>
-                  <div class="cell-lg-12 offset-top-20">
-                    <!-- BootstrapDateTimePicker-->
-                    <div class="form-group">
-                      <label class="form-label" for="rd-mailform-time">Date and Time</label>
-                      <input class="form-control" id="rd-mailform-time" type="text" name="time" data-time-picker="">
-                    </div>
-                  </div>
-                  <div class="cell-lg-12 offset-top-20">
-                    <div class="form-group">
-                      <label class="form-label" for="free-consultation-message">Message</label>
-                      <textarea class="form-control" id="free-consultation-message" name="message" data-constraints="@Required"></textarea>
-                    </div>
-                  </div>
-                </div>
-                <div class="group-sm text-center text-lg-left offset-top-30">
-                  <button class="btn btn-primary btn-mod-1" type="submit">Send</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Free Consultation Modal-->
-      <!-- Modal-->
-      <div class="modal fade contact-modal" id="diagnostic" tabindex="-1" role="dialog" aria-label="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-custom">
-          <div class="modal-content">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <div class="modal-header">
-              <h5 class="modal-title">Order Diagnostics</h5>
-            </div>
-            <div class="modal-dialog-inner">
-              <form class="rd-mailform mailform-modal text-left offset-top-30" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="range range-15">
-                  <div class="cell-lg-12">
-                    <div class="form-group">
-                      <label class="form-label" for="coach-order-name-2">Your name</label>
-                      <input class="form-control" id="coach-order-name-2" type="text" name="name" data-constraints="@Required">
-                    </div>
-                  </div>
-                  <div class="cell-lg-12">
-                    <div class="form-group">
-                      <label class="form-label" for="coach-order-email-2">Your e-mail</label>
-                      <input class="form-control" id="coach-order-email-2" type="email" name="email" data-constraints="@Required @Email">
-                    </div>
-                  </div>
-                  <div class="cell-lg-12">
-                    <div class="form-group">
-                      <label class="form-label" for="contact-order-phone-2">Your phone</label>
-                      <input class="form-control" id="contact-order-phone-2" type="text" name="phone" data-constraints="@Required @Numeric">
-                    </div>
-                  </div>
-                  <div class="cell-lg-12 offset-top-20 block-relative-validation">
-                    <!-- Select 2-->
-                    <select class="form-input select" data-placeholder="Select an option" data-constraints="@Required">
-                      <option label="placeholder"></option>
-                      <option label="2">Washer Repair</option>
-                      <option value="3">Refrigerator Repair</option>
-                      <option value="4">Microwave Repair</option>
-                      <option value="5">Stove Repair</option>
-                    </select>
-                  </div>
-                  <div class="cell-lg-12 offset-top-20">
-                    <div class="form-group">
-                      <label class="form-label" for="coach-order-message-2">Message</label>
-                      <textarea class="form-control" id="coach-order-message-2" name="message" data-constraints="@Required"></textarea>
-                    </div>
-                  </div>
-                </div>
-                <div class="group-sm text-center text-lg-left offset-top-30">
-                  <button class="btn btn btn-primary btn-mod-1" type="submit">Order</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Global Mailform Output-->
   {% include 'footer.html' %}
   </body>
 {% endblock %}
