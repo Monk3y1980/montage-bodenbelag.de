@@ -1,62 +1,18 @@
-<!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
-  <head>
-    <!-- Site Title-->
-    <title>Home</title>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <link rel="icon" href="{{url_for('static', filename='images/favicon.ico')}}" type="image/x-icon">
-    <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,600italic,900">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
-		<!--[if lt IE 10]>
-    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <script src="{{url_for('static', filename='js/html5shiv.min.js')}}"></script>
-		<![endif]-->
-  </head>
-  <body>
+{% extends "base.html" %}
+{% block head %}
+{% block title %}Montage Bodenbelag Alex Frank{% endblock %}
+  {{ super() }}
+{% endblock %}
     <!-- Page-->
-    <div class="page">
-      <!-- Page Header-->
-      <header class="page-head">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-minimal rd-navbar-dark" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-stick-up-clone="false" data-md-stick-up-offset="102px" data-lg-stick-up-offset="60px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true">
-            <div class="rd-navbar-inner">
-              <!-- RD Navbar Panel-->
-              <div class="rd-navbar-panel">
-                <!-- RD Navbar Toggle-->
-                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-outer-panel"><span></span></button>
-                <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html">
-                  <div class="rd-navbar-fixed--hidden"><img src="{{url_for('static', filename='images/logo-180x40.png')}}" alt="" width="180" height="40"/>
-                  </div>
-                  <div class="rd-navbar-fixed--visible"><img src="{{url_for('static', filename='images/logo-inverse-151x38.png')}}" alt="" width="151" height="38"/>
-                  </div></a>
-              </div>
-              <div class="rd-navbar-outer-panel">
-                <div class="rd-navbar-nav-wrap">
-                  <!-- RD Navbar Nav-->
-                  <ul class="rd-navbar-nav">
-                    <li class="active"><a href="#home">Home</a></li>
-                    <li><a href="#about">Über uns</a></li>
-                    <li><a href="#services">Service</a></li>
-                    <li><a href="#team">Das Team</a></li>
-                  <!--  <li><a href="#pricing">Pricing</a></li> -->
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#join-us">Kontakt</a></li>
-                  </ul>
-                </div>
-                <div class="rd-navbar-aside">
-                  <div class="rd-navbar-aside-toggle" data-rd-navbar-toggle=".rd-navbar-aside"><span></span></div>
-                  <div class="rd-navbar-aside-content"><a class="btn btn-primary btn-white-outline" href="#" data-toggle="modal" data-target="#free-consultation">free consultation</a></div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
+{% block page %}
+  {{ super() }}
+  <!-- Page Header-->
+
+  {% block header %}
+    {{ super() }}
+  {% endblock %}
+{% endblock %}
+
       <!-- Page Content-->
       <!-- Swiper-->
       <div class="swiper-container swiper-slider" id="home" data-autoplay="5000" data-loop="true" data-slide-effect="fade">
@@ -537,7 +493,7 @@
                     <p>
                       <q>
                         Thomas had a good knowledge of our LG refrigerator and easily identified why the icemaker wasn't working. He ordered the part and came back to change it and it works perfectly now. Tom and Phillip worked tirelessly to make calling them a good experience.
-                        
+
                       </q>
                     </p>
                   </div>
