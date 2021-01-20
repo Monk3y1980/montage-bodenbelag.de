@@ -9,15 +9,16 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/free-consultation', methods=['GET', 'POST'])
+# @app.route('/free-consultation', methods=['GET', 'POST'])
 def contact_consultation():
     pass
 
 
-@app.route('/inquiry', methods=['GET', 'POST'])
+# @app.route('/inquiry', methods=['GET', 'POST'])
 def contact_consultation():
     pass
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.debug = True
+    app.run()
